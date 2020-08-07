@@ -4,8 +4,8 @@ import java.util.List;
 
 public class ListLanguageResponse extends AbstractListResponse<LanguageResponse> {
 
-    public ListLanguageResponse(List<LanguageResponse> list, boolean last, String language) {
-        super(list, last, language);
+    public ListLanguageResponse(List<LanguageResponse> list, boolean first, boolean last, String language) {
+        super(list, first, last, language);
     }
 
     public ListLanguageResponse(ErrorResponse error) {

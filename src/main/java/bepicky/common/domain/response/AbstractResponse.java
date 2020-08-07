@@ -15,4 +15,8 @@ public abstract class AbstractResponse {
     public AbstractResponse(ErrorResponse error) {
         this.error = error;
     }
+
+    public boolean isError() {
+        return error != null;
+    }
 }
