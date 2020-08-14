@@ -1,17 +1,24 @@
 package bepicky.common.domain.response;
 
-import lombok.Builder;
+import bepicky.common.domain.dto.CategoryDto;
+import bepicky.common.domain.dto.ReaderDto;
 import lombok.Data;
-
-import java.util.List;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Data
-@Builder
-public class CategoryResponse {
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class CategoryResponse extends AbstractResponse {
 
-    private long id;
-    private String name;
-    private String localised;
-    private CategoryResponse parent;
-    private List<CategoryResponse> children;
+    private CategoryDto category;
+
+    public CategoryResponse(ReaderDto reader, CategoryDto category) {
+        super(reader);
+        this.category = category;
+    }
+
+    public CategoryResponse(ErrorResponse error) {
+        super(error);
+    }
 }

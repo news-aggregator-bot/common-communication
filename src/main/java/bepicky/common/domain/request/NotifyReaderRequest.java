@@ -1,12 +1,14 @@
 package bepicky.common.domain.request;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
-@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class NotifyReaderRequest {
 
     private long chatId;

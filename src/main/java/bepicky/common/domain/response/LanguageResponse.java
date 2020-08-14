@@ -1,24 +1,24 @@
 package bepicky.common.domain.response;
 
-import lombok.Builder;
+import bepicky.common.domain.dto.LanguageDto;
+import bepicky.common.domain.dto.ReaderDto;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Data
-@Builder
-public class LanguageResponse {
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class LanguageResponse extends AbstractResponse {
 
-    private String lang;
+    private LanguageDto language;
 
-    private String name;
-
-    private String localized;
-
-    public LanguageResponse() {}
-
-    public LanguageResponse(String lang, String name, String localized) {
-        this.lang = lang;
-        this.name = name;
-        this.localized = localized;
+    public LanguageResponse(ReaderDto reader, LanguageDto language) {
+        super(reader);
+        this.language = language;
     }
 
+    public LanguageResponse(ErrorResponse error) {
+        super(error);
+    }
 }

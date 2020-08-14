@@ -3,6 +3,8 @@ package bepicky.common.domain.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.Set;
+
 @Data
 public class ReaderDto {
 
@@ -24,4 +26,10 @@ public class ReaderDto {
 
     @JsonProperty("primary_language")
     private LanguageDto primaryLanguage;
+
+    private Set<LanguageDto> languages;
+
+    public String getLang() {
+        return primaryLanguage.getLang();
+    }
 }

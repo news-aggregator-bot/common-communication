@@ -1,15 +1,18 @@
 package bepicky.common.domain.response;
 
-import lombok.Getter;
+import bepicky.common.domain.dto.ReaderDto;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
+@Data
+@NoArgsConstructor
 public abstract class AbstractResponse {
 
-    private String lang;
+    private ReaderDto reader;
     private ErrorResponse error;
 
-    public AbstractResponse(String lang) {
-        this.lang = lang;
+    public AbstractResponse(ReaderDto reader) {
+        this.reader = reader;
     }
 
     public AbstractResponse(ErrorResponse error) {
