@@ -14,8 +14,6 @@ public class NewsNoteRequest {
 
     private String url;
 
-    private String description;
-
     private String author;
 
     @JsonProperty("source_page")

@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class NotifyReaderRequest {
+public class NotifyNewsRequest {
 
     @JsonProperty("chat_id")
     private long chatId;
