@@ -7,6 +7,7 @@ public class ErrorUtil {
 
     public static final String LANGUAGE = "language";
     public static final String CATEGORY = "category";
+    public static final String SOURCE = "source";
     public static final String SOURCE_PAGE = "source page";
     public static final String READER = "reader";
 
@@ -22,6 +23,10 @@ public class ErrorUtil {
 
     public static ErrorResponse sourcePageNotFound() {
         return ErrorResponse.builder().code(404).entity(SOURCE_PAGE).build();
+    }
+
+    public static ErrorResponse sourceNotFound() {
+        return ErrorResponse.builder().code(404).entity(SOURCE).build();
     }
 
     public static ErrorResponse readerNotFound() {
