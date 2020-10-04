@@ -9,7 +9,7 @@ public class SourceDto implements Comparable<SourceDto> {
 
     private String name;
 
-    private boolean picked = false;
+    private boolean picked;
 
     @Override
     public int compareTo(SourceDto o) {

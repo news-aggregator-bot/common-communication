@@ -10,6 +10,7 @@ public class CategoryDto {
     private long id;
     private String name;
     private String localised;
+    private boolean picked;
     private CategoryDto parent;
     private List<CategoryDto> children;
 }
