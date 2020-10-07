@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @NoArgsConstructor
@@ -20,4 +21,12 @@ public class SourcePageRequest {
     private LanguageDto language;
 
     private List<CategoryDto> categories;
+
+    public List<CategoryDto> getRegions() {
+        return categories.stream().filter(c -> "REGION".equals(c.getType())).collect(Collectors.toList());
+    }
+
+    public List<CategoryDto> getCommons() {
+        return categories.stream().filter(c -> "COMMON".equals(c.getType())).collect(Collectors.toList());
+    }
 }
