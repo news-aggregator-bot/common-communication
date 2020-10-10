@@ -18,7 +18,7 @@ public class SourcePageRequest {
 
     private String url;
 
-    private LanguageDto language;
+    private List<LanguageDto> languages;
 
     private List<CategoryDto> categories;
 
