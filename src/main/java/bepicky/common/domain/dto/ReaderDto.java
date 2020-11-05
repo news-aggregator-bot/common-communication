@@ -32,4 +32,8 @@ public class ReaderDto {
     public String getLang() {
         return primaryLanguage.getLang();
     }
+
+    public boolean isEnabled() {
+        return "ENABLED".equals(status);
+    }
 }
