@@ -1,11 +1,13 @@
 package bepicky.common.domain.response;
 
 import bepicky.common.ErrorUtil;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ErrorResponse {
 
     private int code;

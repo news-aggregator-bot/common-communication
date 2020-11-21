@@ -14,29 +14,23 @@ public class ErrorUtil {
     private ErrorUtil() {}
 
     public static ErrorResponse languageNotFound() {
-        return ErrorResponse.builder().code(404).entity(LANGUAGE).build();
+        return new ErrorResponse(404, LANGUAGE);
     }
 
     public static ErrorResponse categoryNotFound() {
-        return ErrorResponse.builder().code(404).entity(CATEGORY).build();
+        return new ErrorResponse(404, CATEGORY);
     }
 
     public static ErrorResponse sourcePageNotFound() {
-        return ErrorResponse.builder().code(404).entity(SOURCE_PAGE).build();
+        return new ErrorResponse(404, SOURCE_PAGE);
     }
 
     public static ErrorResponse sourceNotFound() {
-        return ErrorResponse.builder().code(404).entity(SOURCE).build();
+        return new ErrorResponse(404, SOURCE);
     }
 
     public static ErrorResponse readerNotFound() {
-        return ErrorResponse.builder().code(404).entity(READER).build();
+        return new ErrorResponse(404, READER);
     }
 
-    public static ErrorResponse parseError(String message) {
-        String[] errors = message.split(":");
-        String entity = errors[0];
-        int code = Integer.parseInt(errors[1]);
-        return ErrorResponse.builder().code(code).entity(entity).build();
-    }
 }
