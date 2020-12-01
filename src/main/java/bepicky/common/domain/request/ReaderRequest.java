@@ -18,11 +18,9 @@ public class ReaderRequest {
     private String username;
 
     @JsonProperty("first_name")
-    @NotBlank
     private String firstName;
 
     @JsonProperty("last_name")
-    @NotBlank
     private String lastName;
 
     @NotBlank

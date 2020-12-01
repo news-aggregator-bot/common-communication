@@ -1,5 +1,6 @@
 package bepicky.common.domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
@@ -29,11 +30,24 @@ public class ReaderDto {
 
     private Set<LanguageDto> languages;
 
+    @JsonIgnore
     public String getLang() {
         return primaryLanguage.getLang();
     }
 
+    @JsonIgnore
     public boolean isEnabled() {
         return "ENABLED".equals(status);
+    }
+
+    @JsonIgnore
+    public String getName() {
+        if (firstName != null) {
+            return firstName;
+        }
+        if (username != null) {
+            return username;
+        }
+        return "username";
     }
 }
