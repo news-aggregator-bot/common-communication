@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,13 +18,17 @@ public class ReaderRequest {
     private String username;
 
     @JsonProperty("first_name")
+    @NotBlank
     private String firstName;
 
     @JsonProperty("last_name")
+    @NotBlank
     private String lastName;
 
+    @NotBlank
     private String platform;
 
     @JsonProperty("primary_language")
+    @NotBlank
     private String primaryLanguage;
 }
