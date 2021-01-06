@@ -27,6 +27,5 @@ public class ReaderRequest {
     private String platform;
 
     @JsonProperty("primary_language")
-    @NotBlank
-    private String primaryLanguage;
+    private String primaryLanguage = "en";
 }
