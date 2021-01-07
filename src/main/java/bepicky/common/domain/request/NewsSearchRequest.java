@@ -1,22 +1,22 @@
 package bepicky.common.domain.request;
 
-import bepicky.common.domain.dto.NewsNoteDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class NotifyNewsRequest {
+@AllArgsConstructor
+public class NewsSearchRequest {
 
     @JsonProperty("chat_id")
     private long chatId;
 
-    private String lang;
+    private String key;
 
-    private List<NewsNoteDto> notes;
+    private int page;
+
+    @JsonProperty("page_size")
+    private int pageSize;
 }

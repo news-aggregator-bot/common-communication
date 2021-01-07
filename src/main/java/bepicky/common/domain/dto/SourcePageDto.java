@@ -1,7 +1,5 @@
-package bepicky.common.domain.request;
+package bepicky.common.domain.dto;
 
-import bepicky.common.domain.dto.CategoryDto;
-import bepicky.common.domain.dto.LanguageDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +10,7 @@ import java.util.stream.Collectors;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SourcePageRequest {
+public class SourcePageDto {
 
     private String name;
 

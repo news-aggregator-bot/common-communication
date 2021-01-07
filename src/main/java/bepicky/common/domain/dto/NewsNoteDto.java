@@ -1,4 +1,4 @@
-package bepicky.common.domain.request;
+package bepicky.common.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class NewsNoteRequest {
+public class NewsNoteDto {
 
     private String title;
 
@@ -17,5 +17,5 @@ public class NewsNoteRequest {
     private String author;
 
     @JsonProperty("source_page")
-    private SourcePageRequest sourcePage;
+    private SourcePageDto sourcePage;
 }
