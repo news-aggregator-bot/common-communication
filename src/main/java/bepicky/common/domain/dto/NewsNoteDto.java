@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -20,6 +21,6 @@ public class NewsNoteDto {
 
     private Date date;
 
-    @JsonProperty("source_page")
-    private SourcePageDto sourcePage;
+    @JsonProperty("source_pages")
+    private List<SourcePageDto> sourcePages;
 }
