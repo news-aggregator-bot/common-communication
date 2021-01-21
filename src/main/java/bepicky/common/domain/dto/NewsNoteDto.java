@@ -28,15 +28,15 @@ public class NewsNoteDto {
     private List<SourcePageDto> sourcePages;
 
     public String getRegions() {
-        return getSourcePages().stream()
+        return sourcePages.stream()
             .flatMap(s -> s.getRegions().stream())
             .map(CategoryDto::getLocalised)
             .collect(collectingAndThen(toSet(), set -> String.join(", ", set)));
     }
 
     public String getCommons() {
-        return getSourcePages().stream()
-            .flatMap(s -> s.getRegions().stream())
+        return sourcePages.stream()
+            .flatMap(s -> s.getCommons().stream())
             .map(CategoryDto::getLocalised)
             .collect(collectingAndThen(toSet(), set -> String.join(", ", set)));
     }
