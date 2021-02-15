@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class NewsNoteDto {
     private Date date;
 
     @JsonProperty("source_pages")
-    private List<SourcePageDto> sourcePages;
+    private List<SourcePageDto> sourcePages = new ArrayList<>();
 
     public String getRegions() {
         return sourcePages.stream()
