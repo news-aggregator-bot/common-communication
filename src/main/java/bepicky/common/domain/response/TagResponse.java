@@ -9,15 +9,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class SubscribeTagResponse extends AbstractResponse {
+public class TagResponse extends AbstractResponse {
     private TagDto tag;
 
-    public SubscribeTagResponse(ReaderDto reader, TagDto tag) {
+    public TagResponse(ReaderDto reader, TagDto tag) {
         super(reader);
         this.tag = tag;
     }
 
-    public SubscribeTagResponse(ErrorResponse error) {
+    public TagResponse(ErrorResponse error) {
         super(error);
     }
 }

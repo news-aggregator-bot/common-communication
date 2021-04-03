@@ -10,6 +10,7 @@ public class ErrorUtil {
     public static final String SOURCE = "source";
     public static final String SOURCE_PAGE = "source page";
     public static final String READER = "reader";
+    public static final String TAG = "tag";
 
     private ErrorUtil() {}
 
@@ -31,6 +32,10 @@ public class ErrorUtil {
 
     public static ErrorResponse readerNotFound() {
         return new ErrorResponse(404, READER);
+    }
+
+    public static ErrorResponse tagNotFound() {
+        return new ErrorResponse(404, TAG);
     }
 
 }
