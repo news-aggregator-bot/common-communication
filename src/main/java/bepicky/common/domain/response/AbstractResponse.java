@@ -19,6 +19,11 @@ public abstract class AbstractResponse {
         this.error = error;
     }
 
+    public AbstractResponse(ErrorResponse error, ReaderDto reader) {
+        this.error = error;
+        this.reader = reader;
+    }
+
     public boolean isError() {
         return error != null;
     }

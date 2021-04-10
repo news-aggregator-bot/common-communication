@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SubscribeTagRequest {
+public class TagRequest {
     @JsonProperty("chat_id")
     @NotNull
     private Long chatId;

@@ -20,4 +20,8 @@ public class TagResponse extends AbstractResponse {
     public TagResponse(ErrorResponse error) {
         super(error);
     }
+
+    public TagResponse(ErrorResponse error, ReaderDto reader) {
+        super(error, reader);
+    }
 }
