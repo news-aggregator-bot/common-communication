@@ -28,6 +28,8 @@ public class StatusReaderDto {
 
     private Set<SourceDto> sources;
 
+    private Set<String> tags;
+
     @JsonIgnore
     public Set<CategoryDto> getRegions() {
         return categories.stream().filter(c -> "REGION".equals(c.getType())).collect(Collectors.toSet());
