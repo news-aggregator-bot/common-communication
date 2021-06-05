@@ -38,4 +38,8 @@ public class ErrorUtil {
         return new ErrorResponse(404, TAG);
     }
 
+    public static ErrorResponse tagLimit() {
+        return new ErrorResponse(403, TAG);
+    }
+
 }

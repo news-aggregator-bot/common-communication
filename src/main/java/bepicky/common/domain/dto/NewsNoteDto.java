@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.collectingAndThen;
 import static java.util.stream.Collectors.toSet;
@@ -40,5 +41,12 @@ public class NewsNoteDto {
             .flatMap(s -> s.getCommons().stream())
             .map(CategoryDto::getLocalised)
             .collect(collectingAndThen(toSet(), set -> String.join(", ", set)));
+    }
+
+    public String getSources() {
+        return getSourcePages()
+            .stream()
+            .map(SourcePageDto::getSourceName)
+            .collect(Collectors.joining(","));
     }
 }
