@@ -1,6 +1,6 @@
 package bepicky.common.domain.request;
 
-import bepicky.common.domain.dto.NewsNoteDto;
+import bepicky.common.domain.dto.NewsNoteNotificationDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,5 +18,5 @@ public class NotifyNewsRequest {
 
     private String lang;
 
-    private List<NewsNoteDto> notes;
+    private List<NewsNoteNotificationDto> notifications;
 }
