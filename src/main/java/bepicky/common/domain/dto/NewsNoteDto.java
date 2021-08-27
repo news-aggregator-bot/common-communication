@@ -18,6 +18,9 @@ import static java.util.stream.Collectors.toSet;
 @NoArgsConstructor
 public class NewsNoteDto {
 
+    @JsonProperty("note_id")
+    private Long noteId;
+
     private String title;
 
     private String url;

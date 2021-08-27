@@ -6,17 +6,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class NotifyNewsRequest {
+public class NewsNotificationSuccessMessage {
 
     @JsonProperty("chat_id")
-    private long chatId;
+    private Long chatId;
 
-    private String lang;
-
-    private List<NewsNoteNotificationDto> notifications;
+    @JsonProperty("note_id")
+    private Long noteId;
 }
