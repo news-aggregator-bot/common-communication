@@ -1,6 +1,5 @@
-package bepicky.common.domain.request;
+package bepicky.common.msg;
 
-import bepicky.common.domain.dto.NewsNoteNotificationDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
