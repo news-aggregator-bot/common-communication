@@ -1,4 +1,4 @@
-package bepicky.common.msg.admin;
+package bepicky.common.msg;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
