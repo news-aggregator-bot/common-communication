@@ -1,4 +1,4 @@
-package bepicky.common.domain.request;
+package bepicky.common.msg;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -8,11 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LanguageRequest {
+public class TextMessage {
 
     @JsonProperty("chat_id")
-    private long chatId;
+    private Long chatId;
 
-    @JsonProperty("lang")
-    private String lang;
+    private String text;
 }
