@@ -13,8 +13,6 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class SourcePageDto {
 
-    private String name;
-
     private String url;
 
     @JsonProperty("source_name")
