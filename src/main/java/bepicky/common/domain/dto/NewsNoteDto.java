@@ -36,6 +36,7 @@ public class NewsNoteDto {
         return sourcePages.stream()
             .flatMap(s -> s.getRegions().stream())
             .map(CategoryDto::getLocalised)
+            .distinct()
             .collect(collectingAndThen(toSet(), set -> String.join(", ", set)));
     }
 
@@ -43,6 +44,7 @@ public class NewsNoteDto {
         return sourcePages.stream()
             .flatMap(s -> s.getCommons().stream())
             .map(CategoryDto::getLocalised)
+            .distinct()
             .collect(collectingAndThen(toSet(), set -> String.join(", ", set)));
     }
 
@@ -50,6 +52,7 @@ public class NewsNoteDto {
         return getSourcePages()
             .stream()
             .map(SourcePageDto::getSourceName)
+            .distinct()
             .collect(Collectors.joining(","));
     }
 }
