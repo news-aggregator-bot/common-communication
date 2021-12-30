@@ -32,22 +32,6 @@ public class NewsNoteDto {
     @JsonProperty("source_pages")
     private List<SourcePageDto> sourcePages = new ArrayList<>();
 
-    public String getRegions() {
-        return sourcePages.stream()
-            .flatMap(s -> s.getRegions().stream())
-            .map(CategoryDto::getLocalised)
-            .distinct()
-            .collect(collectingAndThen(toSet(), set -> String.join(", ", set)));
-    }
-
-    public String getCommons() {
-        return sourcePages.stream()
-            .flatMap(s -> s.getCommons().stream())
-            .map(CategoryDto::getLocalised)
-            .distinct()
-            .collect(collectingAndThen(toSet(), set -> String.join(", ", set)));
-    }
-
     public String getSources() {
         return getSourcePages()
             .stream()
